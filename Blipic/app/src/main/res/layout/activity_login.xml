@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/img_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@drawable/blipic_background_x2">
+
+    <ImageView
+        style="@style/My_ImageView"
+        android:id="@+id/img_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="101dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="59dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/blipic_logo"/>
+
+    <RelativeLayout
+        android:id="@+id/form_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87dp">
+        <include layout="@layout/form_welcome" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/form_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_logo"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true">
+        <include layout="@layout/form_signup" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/form_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_logo"
+        android:layout_marginTop="56dp"
+        android:layout_centerHorizontal="true">
+        <include layout="@layout/form_login" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/form_pass_recovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_logo"
+        android:layout_marginTop="66dp"
+        android:layout_centerHorizontal="true">
+        <include layout="@layout/form_pass_recovery" />
+    </RelativeLayout>
+</RelativeLayout>

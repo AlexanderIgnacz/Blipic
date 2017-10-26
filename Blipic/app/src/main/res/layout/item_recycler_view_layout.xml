@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingEnd="40dp"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/video"
+        app:civ_border_width="3dp"
+        app:civ_border_color="#fff"/>
+
+    <TextView
+        android:id="@+id/tv_alphabet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:textSize="@dimen/ios_font_14"
+        tools:text="Alphabet text"
+        android:textColor="#000"
+        android:layout_marginLeft="10dp"
+        />
+    <RelativeLayout
+        android:id="@+id/create_activity_invitefriend_item"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:background="@drawable/invite_btn_round"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite"
+            android:layout_centerInParent="true"
+            android:textColor="#000"
+            />
+    </RelativeLayout>
+</LinearLayout>

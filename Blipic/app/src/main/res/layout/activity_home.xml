@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <FrameLayout
+        android:id="@+id/base_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/status_bar" />
+
+    <com.trekr.Utils.TapOpacityHighlightLayout
+        android:id="@+id/btn_tab_quick_access"
+        android:layout_width="33dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:paddingRight="15dp">
+        <ImageView
+            style="@style/My_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sm_tab_quick_access" />
+    </com.trekr.Utils.TapOpacityHighlightLayout>
+
+</RelativeLayout>

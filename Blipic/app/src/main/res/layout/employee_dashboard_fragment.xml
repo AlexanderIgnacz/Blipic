@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:seekarc="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        style="@style/My_ImageView"
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/dash_background"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.49"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+    
+                <com.trekr.Utils.TapOpacityHighlightLayout
+                    android:id="@+id/btn_userImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="26dp"
+                    android:layout_centerHorizontal="true">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/sun_dashboard"
+                        app:civ_border_width="3dp"
+                        app:civ_border_color="#fff"/>
+                </com.trekr.Utils.TapOpacityHighlightLayout>
+    
+                <com.trekr.Utils.TapOpacityHighlightLayout
+                    android:id="@+id/moreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="16dp">
+                    <ImageView
+                        style="@style/My_ImageView"
+                        android:layout_width="57dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/moreactions"
+                        android:adjustViewBounds="true" />
+                </com.trekr.Utils.TapOpacityHighlightLayout>
+            </RelativeLayout>
+    
+            <TextView
+                style="@style/My_TextView"
+                android:id="@+id/userNameLabel"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:text="userNameLabel"
+                android:textSize="@dimen/ios_font_18" />
+    
+            <TextView
+                style="@style/My_TextView"
+                android:id="@+id/locationLabel"
+                android:layout_marginTop="3dp"
+                android:visibility="invisible"
+                android:textStyle="bold"
+                android:text="locationLabel"
+                android:textSize="@dimen/ios_font_18" />
+
+            <com.trekr.Utils.TapOpacityHighlightLayout
+                android:id="@+id/logItButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/logit_round_button">
+                <ImageView
+                    style="@style/My_ImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="9dp"
+                    android:src="@drawable/camera_icon" />
+
+                <TextView
+                    style="@style/My_TextView"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/ios_font_18"
+                    android:text="Log It" />
+            </com.trekr.Utils.TapOpacityHighlightLayout>
+        </LinearLayout>
+
+        <com.trekr.BlipicWellness.Controllers.Dashboard.EmployeeFiltersView
+            android:id="@+id/filterView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.51"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/sunShineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="13"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/My_TextView"
+                        android:textSize="@dimen/ios_font_14"
+                        android:text="Sunshine" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.trekr.BlipicWellness.Controllers.Dashboard.SeekArc
+                            style="@style/My_SeekArc"
+                            android:id="@+id/sunShineCircleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="23dp"
+                            seekarc:progressColor="@color/sunshine"
+                            seekarc:progress="0"
+                            seekarc:thumb="@drawable/arc_thumb_sunshine"/>
+
+                        <ImageView
+                            style="@style/My_ImageView"
+                            android:layout_width="55dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/sun_dashboard" />
+                        <TextView
+                            style="@style/My_TextView"
+                            android:id="@+id/sunpointsLabel"
+                            android:layout_marginRight="5dp"
+                            android:layout_centerInParent="true"
+                            android:textSize="@dimen/ios_font_10"
+                            android:text="0" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activitesView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="70dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/My_TextView"
+                        android:textSize="@dimen/ios_font_14"
+                        android:text="Activities" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.trekr.BlipicWellness.Controllers.Dashboard.SeekArc
+                            style="@style/My_SeekArc"
+                            android:id="@+id/activityCircleView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="23dp"
+                            seekarc:progressColor="@color/activities"
+                            seekarc:progress="0"
+                            seekarc:thumb="@drawable/arc_thumb_activities"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingTop="5dp">
+                            <ImageView
+                                style="@style/My_ImageView"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/activity_dashboard" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+                            <TextView
+                                android:id="@+id/activityPointsLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/ios_font_10"
+                                android:text="0" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingRight="20dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4" />
+
+                <LinearLayout
+                    android:id="@+id/destinationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="11"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/My_TextView"
+                        android:textSize="@dimen/ios_font_14"
+                        android:text="Destinations" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.trekr.BlipicWellness.Controllers.Dashboard.SeekArc
+                            style="@style/My_SeekArc"
+                            android:id="@+id/destinationCircleView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="23dp"
+                            seekarc:progressColor="@color/destinations"
+                            seekarc:progress="0"
+                            seekarc:thumb="@drawable/arc_thumb_destinations"/>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingTop="7dp">
+                            <ImageView
+                                style="@style/My_ImageView"
+                                android:layout_width="35dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/dest_dashboard" />
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:paddingRight="1dp">
+                            <TextView
+                                style="@style/My_TextView"
+                                android:id="@+id/destinationPointsLabel"
+                                android:textSize="@dimen/ios_font_10"
+                                android:text="0" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="6" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

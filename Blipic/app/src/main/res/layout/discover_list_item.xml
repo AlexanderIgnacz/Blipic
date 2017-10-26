@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        >
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/google"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:text="Anna Chos"
+            android:textAlignment="gravity"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/threedots"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="center"
+            android:src="@drawable/cll_no_media_placeholder"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/recyclerview_mile_txt"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="4042.4 miles away"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="10dp"
+                android:textColor="#fff"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="10 likes"
+                android:layout_marginTop="15dp"
+                android:paddingRight="10dp"
+                android:textAlignment="textEnd"
+                android:textColor="#fff"
+                />
+
+            <ImageButton
+                android:id="@+id/recyclerview_like_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bn_dislike"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="70dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></LinearLayout>
+
+</LinearLayout>

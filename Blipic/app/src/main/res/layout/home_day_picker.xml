@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@drawable/searchbar_round_background"
+    >
+    <com.trekr.Common.HorizontalPicker.HorizontalPicker
+        android:id="@+id/calendar_horizontal_picker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/calendar_picker"
+        android:ellipsize="marquee"
+        android:textSize="@dimen/ios_font_14"
+        android:marqueeRepeatLimit="3"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:dividerSize="10dp" />
+
+    <LinearLayout
+        android:id="@+id/home_daypicker_fiveitems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#2379e2" />
+        <View
+            android:layout_width="160px"
+            android:layout_height="match_parent"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="#2379e2" />
+    </LinearLayout>
+</RelativeLayout>

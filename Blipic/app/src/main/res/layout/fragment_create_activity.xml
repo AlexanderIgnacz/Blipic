@@ -1,0 +1,473 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.trekr.Blipic.Controllers.Activities.NotificationsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff"
+        >
+
+        <!--Header-->
+        <include layout="@layout/fragment_header"/>
+
+        <!--add on-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:isScrollContainer="false"
+            >
+
+            <!--Content-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    >
+                    <ImageView
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/create_activity_addphoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/addphoto"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:text="Tap to add photo"
+                        android:textSize="11dp"
+                        android:gravity="center"
+                        android:background="#d5d5d5"
+                        android:textColor="#656667"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_height"
+                    android:paddingLeft="15dp"
+                    android:background="#fff"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Title"
+                        android:textSize="@dimen/cell_text"
+                        />
+                </RelativeLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <RelativeLayout
+                    android:id="@+id/create_activity_select_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_height"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/settings_field_background"
+                    >
+                    <TextView
+                        android:text="Activity Type:"
+                        style="@style/My_TextView"
+                        android:textColor="#000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/cell_text"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/create_activity_select_type_text"
+                        android:text="select"
+                        style="@style/My_TextView"
+                        android:textColor="#000"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/cell_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:alpha="0.5"
+                        >
+                    </TextView>
+                </RelativeLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_height"
+                    android:paddingLeft="15dp"
+                    android:background="#fff"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Website"
+                        android:textSize="@dimen/cell_text"
+                        />
+                </RelativeLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_height"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/settings_field_background"
+                    >
+                    <TextView
+                        android:text="Private"
+                        style="@style/My_TextView"
+                        android:textColor="#000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/cell_text"
+                        >
+                    </TextView>
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:textSize="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        />
+                </RelativeLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <RelativeLayout
+                    android:id="@+id/create_activity_google_datepicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_height"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/settings_field_background"
+                    >
+                    <TextView
+                        android:text="Time/Date"
+                        style="@style/My_TextView"
+                        android:textColor="#000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/cell_text"
+                        >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/create_activity_date_text"
+                        android:text="tap to add date"
+                        style="@style/My_TextView"
+                        android:textColor="#000"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/cell_text"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:alpha="0.5"
+                        >
+                    </TextView>
+                </RelativeLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/cell_height"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/settings_field_background"
+                    >
+                    <TextView
+                        android:text="Repetition"
+                        style="@style/My_TextView"
+                        android:textColor="#000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/cell_text"
+                        >
+                    </TextView>
+
+                    <Switch
+                        android:id="@+id/create_activity_repetition_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:textSize="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    >
+                    <com.trekr.Blipic.Controllers.HomeMap.RepetitionOption
+                        android:id="@+id/create_activity_repetition"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                    </com.trekr.Blipic.Controllers.HomeMap.RepetitionOption>
+                </RelativeLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Description"
+                        android:gravity="top|left"
+                        android:paddingTop="10dp"
+                        android:inputType="textMultiLine"
+                        android:maxLines="10"
+                        android:minLines="6"
+                        android:lines="8"
+                        android:scrollbars="vertical"
+                        android:textSize="@dimen/cell_text"
+                        />
+                </LinearLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/create_activity_invitefriend"
+                        android:layout_width="160dp"
+                        android:layout_height="35dp"
+                        android:textSize="22dp"
+                        android:textColor="#fff"
+                        android:background="@drawable/invite_btn_round"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Invite Friends"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/cell_text"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--Bar-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/iosDivider"
+                    >
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/black_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        >
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/create_activity_invite_dlg"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        >
+
+        <!--Header-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/notifications_header_round"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INVITE FRIENDS"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/ios_font_14"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invite"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/ios_font_14"
+                    android:layout_marginRight="20dp"
+                    />
+                <TextView
+                    android:id="@+id/invite_modal_backbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/ios_font_14"
+                    android:layout_marginLeft="20dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/notifications_content_round"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cell_height"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/create_activity_invitefriend_search"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:hint="Search Friends"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/cell_text"
+                    />
+                <RelativeLayout
+                    android:id="@+id/create_activity_invitefriend_cancelfind"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/cell_text"
+                        android:textColor="#747474"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:baselineAligned="false">
+
+                <in.myinnos.alphabetsindexfastscrollrecycler.IndexFastScrollRecyclerView
+                    android:id="@+id/fast_scroller_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

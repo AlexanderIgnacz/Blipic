@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#aaa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            style="@style/My_TextView"
+            android:id="@+id/btn_Week"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:tag="0"
+            android:textSize="@dimen/ios_font_15"
+            android:text="Week" />
+        <TextView
+            style="@style/My_TextView"
+            android:id="@+id/btn_Month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:tag="1"
+            android:textColor="#aaa"
+            android:textSize="@dimen/ios_font_15"
+            android:text="Month" />
+        <TextView
+            style="@style/My_TextView"
+            android:id="@+id/btn_Quarter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:tag="2"
+            android:textColor="#aaa"
+            android:textSize="@dimen/ios_font_15"
+            android:text="Quarter" />
+        <TextView
+            style="@style/My_TextView"
+            android:id="@+id/btn_Year"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:selectableItemBackground"
+            android:tag="3"
+            android:textSize="@dimen/ios_font_15"
+            android:textColor="#aaa"
+            android:text="Year" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#aaa" />
+</LinearLayout>

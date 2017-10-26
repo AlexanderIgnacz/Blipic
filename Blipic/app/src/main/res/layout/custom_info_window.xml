@@ -1,0 +1,7 @@
+<android.support.v4.view.ViewPager
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pager_home"
+    android:layout_width="275dp"
+    android:layout_height="350dp"
+    android:background="@drawable/callout_destination"
+    />

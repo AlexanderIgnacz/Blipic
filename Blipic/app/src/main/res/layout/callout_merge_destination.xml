@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    >
+    <com.trekr.Utils.TapOpacityHighlightLayout
+        android:id="@+id/btn_leftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp">
+        
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="53dp"
+            android:padding="10dp"
+            android:src="@drawable/leftarrow" />
+
+    </com.trekr.Utils.TapOpacityHighlightLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/containerView"
+        android:layout_width="@dimen/callout_width"
+        android:layout_height="@dimen/callout_height">
+
+    </android.support.v4.view.ViewPager>
+
+    <com.trekr.Utils.TapOpacityHighlightLayout
+        android:id="@+id/btn_rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="53dp"
+            android:padding="10dp"
+            android:src="@drawable/rightarrow" />
+
+    </com.trekr.Utils.TapOpacityHighlightLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorPrimaryLight">#C4C9E8</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="sunshine">#ffd400</color>
+    <color name="destinations">#8cc63f</color>
+    <color name="activities">#00aeef</color>
+
+    <color name="side_menu_background">#dd000000</color>
+
+    <color name="activity_text">#244D01</color>
+    <color name="callout_destination_color">#65B44E</color>
+    <color name="callout_activity_color">#65B44E</color>
+
+    <!--SeekArc-->
+    <color name="progress_gray">#66555555</color>
+
+    <!-- overwrite the selected colors because the primary color is to dark -->
+    <color name="material_drawer_selected_text">#fff</color>
+    <color name="material_drawer_dark_selected_text">#fff</color>
+
+    <!--Divider-->
+    <color name="iosDivider">#9b9b9b</color>
+    <color name="footerColor">#F0EFF7</color>
+
+    <!--Horizontal Option-->
+    <color name="horizontalOptionChosenColor">#0079FF</color>
+    <color name="horizontalOptionUnChosenColor">#ffffff</color>
+
+    <!--Repetition Option-->
+    <color name="repetitionOptionChosenColor">#aaaaaa</color>
+    <color name="repetitionOptionUnChosenColor">#ffffff</color>
+</resources>

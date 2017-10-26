@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    >
+
+    <RelativeLayout
+        android:id="@+id/option_left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/border_horizontal_option_left_selected"
+        >
+        <TextView
+            android:id="@+id/option_left_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="standard"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/option_center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/border_horizontal_option_center"
+        >
+        <TextView
+            android:id="@+id/option_center_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="satellite"
+            android:textColor="@color/horizontalOptionChosenColor"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/option_right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/border_horizontal_option_right"
+        >
+        <TextView
+            android:id="@+id/option_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hybrid"
+            android:textColor="@color/horizontalOptionChosenColor"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

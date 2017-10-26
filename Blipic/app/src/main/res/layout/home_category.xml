@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/home_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="138">
+
+            <ImageView
+                android:id="@+id/btn_mountain"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="138"
+                android:clickable="true"
+                android:tag="key-0"
+                android:src="@drawable/btn_mountain_drawable" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8" />
+
+            <ImageView
+                android:id="@+id/btn_snow"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="138"
+                android:clickable="true"
+                android:tag="key-1"
+                android:src="@drawable/btn_snow_drawable" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="138">
+
+            <ImageView
+                android:id="@+id/btn_water"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="138"
+                android:clickable="true"
+                android:tag="key-3"
+                android:src="@drawable/btn_water_drawable" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8" />
+
+            <ImageView
+                android:id="@+id/btn_wheel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="138"
+                android:clickable="true"
+                android:tag="key-2"
+                android:src="@drawable/btn_wheel_drawable" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_centerInParent="true"
+        android:padding="5dp"
+        android:src="@drawable/wheel_cross" />
+
+</RelativeLayout>

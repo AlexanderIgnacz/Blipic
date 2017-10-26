@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/wall_wheel_x2"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Staff"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_staff_category_container"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+        <com.trekr.Blipic.Controllers.HomeMap.Components.CategoryView
+            android:id="@+id/my_staff_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </com.trekr.Blipic.Controllers.HomeMap.Components.CategoryView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_staff_black_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000"
+        >
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/my_staff_label"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <com.trekr.Blipic.Controllers.HomeMap.Components.RoundRectCornerImageView
+            android:id="@+id/testview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/blipic_background_x2"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coming Soon"
+            android:textSize="@dimen/ios_font_14"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

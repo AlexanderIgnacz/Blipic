@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <fragment
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <ImageView
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <com.trekr.Utils.TapOpacityHighlightLayout
+        android:id="@+id/locationButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="70dp"
+        android:visibility="visible"
+        android:padding="5dp">
+        <ImageView
+            style="@style/My_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/location_button" />
+    </com.trekr.Utils.TapOpacityHighlightLayout>
+
+    <ImageView
+        android:id="@+id/btn_camera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/btn_camera" />
+
+    <LinearLayout
+        android:id="@+id/lay_searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/home_searchbar_margin"
+        android:layout_marginLeft="@dimen/home_margin"
+        android:layout_marginRight="@dimen/home_margin"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/searchbar_round_background">
+
+            <EditText
+                android:id="@+id/textFieldSearchBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:drawableLeft="@drawable/sb_search"
+                android:inputType="text|textCapSentences"
+                android:imeOptions="actionSearch"
+                android:textSize="@dimen/ios_font_14"
+                android:hint="@string/search_activities_around_you" />
+
+            <com.trekr.Utils.TapOpacityHighlightLayout
+                android:id="@+id/btnClearSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/close_button" />
+            </com.trekr.Utils.TapOpacityHighlightLayout>
+
+        </LinearLayout>
+
+        <com.trekr.Blipic.Controllers.HomeMap.Components.BLPAnimatedImageView
+            android:id="@+id/searchbarSideLogo"
+            android:layout_marginLeft="10dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.trekr.Blipic.Controllers.HomeMap.Components.CategoryView
+        android:id="@+id/categoriesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.trekr.Blipic.Controllers.HomeMap.Components.SubCategoryView
+        android:id="@+id/subCategoriesView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/viewSerchAndDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_searchBar"
+        android:layout_marginTop="@dimen/home_location_margin"
+        android:layout_marginLeft="@dimen/home_margin"
+        android:layout_marginRight="@dimen/home_margin">
+        <LinearLayout
+            android:id="@+id/lay_textFieldSearchLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="14dp"
+            android:clickable="true"
+            android:background="@drawable/searchbar_round_background">
+
+            <com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+                style="@style/My_EditTextStyle"
+                android:id="@+id/textFieldSearchLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:drawableLeft="@drawable/sb_location"
+                android:inputType="text|textCapSentences"
+                android:imeOptions="actionSearch"
+                android:textSize="@dimen/ios_font_14"
+                android:text="@string/current_location"
+                android:hint="@string/search_locations"
+                app:pacv_languageCode="en"
+                app:pacv_googleMapsApiKey="@string/google_maps_api_key"
+                app:pacv_adapterClass="com.trekr.Common.PlaceAutoTextAdapter.TestPlacesAutocompleteAdapter"
+                />
+
+            <com.trekr.Utils.TapOpacityHighlightLayout
+                android:id="@+id/btnClearLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/close_button" />
+            </com.trekr.Utils.TapOpacityHighlightLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_daypicker_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/searchbar_round_background">
+            <include
+                layout="@layout/home_day_picker" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/searchAreaButton"
+        style="@style/My_TextView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/search_this_area"
+        android:textColor="#555"
+        android:textSize="@dimen/ios_font_13"
+        android:padding="5dp"
+        android:clickable="true"
+        android:background="@drawable/round_button_background" />
+
+    <ListView
+        android:id="@+id/searchResultsTableView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dp" />
+
+</RelativeLayout>

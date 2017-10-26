@@ -1,0 +1,158 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    flavorDimensions 'buildtype'
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 26
+        renderscriptSupportModeEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'blipic-debug'
+            keyPassword 'blipic-debug'
+            storePassword 'blipic-debug'
+            storeFile file('../keystore/debug.keystore')
+        }
+        releaseBlipic {
+            keyAlias 'blipic-release'
+            keyPassword 'blipic-release'
+            storePassword 'blipic-release'
+            storeFile file('../keystore/blipic-release.keystore')
+        }
+        releaseBlipicWellness {
+            keyAlias 'blipicWellness-release'
+            keyPassword 'blipicWellness-release'
+            storePassword 'blipicWellness-release'
+            storeFile file('../keystore/blipicWellness-release.keystore')
+        }
+    }
+
+    productFlavors {
+        Blipic {
+            dimension 'buildtype'
+            applicationId "com.trekr.blipic"
+
+            setProperty("archivesBaseName", "Blipic-${versionName}")
+        }
+
+        BlipicWellness {
+            dimension 'buildtype'
+            applicationId "com.trekr.blipicWellness"
+
+            setProperty("archivesBaseName", "BlipicWellness-${versionName}")
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            productFlavors.Blipic.signingConfig signingConfigs.releaseBlipic
+            productFlavors.BlipicWellness.signingConfig signingConfigs.releaseBlipicWellness
+        }
+    }
+
+    repositories {
+        jcenter()
+        maven { url "https://maven.google.com" }
+        maven { url "https://jitpack.io" }
+        maven { url 'http://Manabu-GT.github.com/GlassView/mvn-repo' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.0.0'
+    compile 'com.android.support:support-v4:26.0.0'
+    compile 'com.android.support:design:26.0.0'
+    compile 'com.android.support:exifinterface:26.0.0'
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+
+    // ButterKnife
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    // Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-moshi:2.3.0'
+
+    // Gson
+    compile 'com.google.code.gson:gson:2.8.0'
+
+    // Glide
+    compile 'com.github.bumptech.glide:glide:4.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0'
+
+    // CircleImage
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    // ActionSheet
+    compile 'com.baoyz.actionsheet:library:1.1.7'
+
+    // Camera & Gallery image picking with crop
+    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.7'
+
+    // Google Map
+    compile 'com.google.maps.android:android-maps-utils:0.5+'
+    compile 'com.google.android.gms:play-services-maps:11.2.0'
+    compile 'com.google.android.gms:play-services-location:11.2.0'
+    compile 'com.google.android.gms:play-services-places:11.2.0'
+
+    compile 'pl.charmas.android:android-reactive-location2:2.0@aar'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.5' //you can override RxJava version if you need
+
+    // Alphabet Recycler
+    compile 'com.github.myinnos:AlphabetIndex-Fast-Scroll-RecyclerView:1.0.8'
+
+    //Horizontal Picker
+    compile 'com.wefika:horizontal-picker:1.1.1'
+
+    // Side Menu
+    compile('com.mikepenz:materialdrawer:5.9.4@aar') { transitive = true }
+
+    // Google Places auto complete edit text
+    compile 'com.seatgeek:placesautocomplete:0.3-SNAPSHOT'
+
+    // Animation Helper
+    compile 'com.bartoszlipinski:viewpropertyobjectanimator:1.4.5'
+
+    // Keyboard Event
+    compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+}

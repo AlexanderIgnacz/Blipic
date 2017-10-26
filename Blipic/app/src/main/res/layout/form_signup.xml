@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_login_button"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/My_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/field_signup"
+            android:adjustViewBounds="true" />
+
+        <EditText
+            android:id="@+id/txt_signup_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="@string/hint_first_name" />
+
+        <EditText
+            android:id="@+id/txt_signup_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_signup_firstName"
+            android:layout_marginTop="@dimen/signup_field_height"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="@string/hint_last_name" />
+
+        <EditText
+            android:id="@+id/txt_signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_signup_lastName"
+            android:layout_marginTop="@dimen/signup_field_height"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:hint="@string/hint_email" />
+
+        <EditText
+            android:id="@+id/txt_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_signup_email"
+            android:layout_marginTop="@dimen/signup_field_height"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:inputType="textPassword"
+            android:hint="@string/hint_password" />
+    </RelativeLayout>
+
+    <com.trekr.Utils.TapOpacityHighlightLayout
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+        <ImageView
+            style="@style/My_ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_login_button"
+            android:src="@drawable/bn_signup"
+            android:adjustViewBounds="true"
+            android:gravity="center" />
+    </com.trekr.Utils.TapOpacityHighlightLayout>
+
+</LinearLayout>

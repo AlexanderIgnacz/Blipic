@@ -1,0 +1,77 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--EditText Style-->
+        <item name="editTextStyle">@style/My_EditTextStyle</item>
+
+        <!--ActionSheetStyle-->
+        <item name="actionSheetStyle">@style/ActionSheetStyleiOS7</item>
+    </style>
+
+    <!-- Edit Text Style -->
+    <style name="My_EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColorHint">#aa808080</item>
+    </style>
+
+    <!--No Action Bar-->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--No Status Bar-->
+    <style name="AppTheme.NoStatus" parent="AppTheme.NoActionBar"/>
+
+    <!--Transparent Status Bar-->
+    <style name="AppTheme.TransparentStatus" parent="AppTheme.NoActionBar"/>
+
+    <!--Launcher Theme-->
+    <style name="AppTheme.Launcher" parent="AppTheme.NoStatus">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="AppTheme.MaterialTheme" parent="MaterialDrawerTheme.TranslucentStatus">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--EditText Style-->
+        <item name="editTextStyle">@style/My_EditTextStyle</item>
+
+        <!--ActionSheetStyle-->
+        <item name="actionSheetStyle">@style/ActionSheetStyleiOS7</item>
+    </style>
+
+    <!--My Text View-->
+    <style name="My_TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!--My Image View-->
+    <style name="My_ImageView">
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <!--My SeekArc-->
+    <style name="My_SeekArc">
+        <item name="max">360</item>
+        <item name="progressWidth">5dp</item>
+        <item name="arcWidth">5dp</item>
+        <item name="touchInside">false</item>
+        <item name="enabled">false</item>
+    </style>
+
+</resources>
